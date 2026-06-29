@@ -1,0 +1,132 @@
+site:
+  title: MDToHTMLDocs
+  description: This HTML File/WebSite contains the full Documentation for MDToHTMLDocs.
+  footer: 2026 - MDToHTMLDocs - Built by Panther
+  lang: en
+  logo:
+  favicon:
+  # extra_head: |
+  #   <script defer data-domain="example.com" src="https://plausible.io/js/script.js"></script>
+
+source: ./wiki
+output: site.html
+
+theme:
+  preset: default            # default | slate | warm | mint | sand
+  mode: auto                 # auto | light | dark
+  density: compact           # cozy | normal | compact
+  font_body: "Inter, ui-sans-serif, system-ui, -apple-system, sans-serif"
+  font_heading: "Inter, ui-sans-serif, system-ui, -apple-system, sans-serif"
+  font_mono: "'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace"
+  google_fonts:
+    - "Inter:wght@400;500;600;700"
+    - "JetBrains+Mono:wght@400;500"
+
+  radius: 10
+  sidebar_width: 280
+  content_max: 820
+
+  pygments_style_light: default
+  pygments_style_dark: monokai
+
+  # Any preset color can be overridden by setting the underlying key directly:
+  # accent: "#5B6CFF"
+  # bg: "#FFFFFF"
+  # bg_dark: "#0F1117"
+
+  # extra_css: |
+  #   .page h1 { letter-spacing: -0.02em; }
+  # extra_js: |
+  #   console.log('loaded');
+
+nav:
+  show_root_readme_as_home: true
+  collapse_depth: 1
+  default_folder_index: [Home.md, README.md]
+
+  order:
+    - Home
+    - Getting-Started
+    - Installation
+    - user-guide
+    - developer-guide
+    - reference
+  rename:
+    user-guide: User Guide
+    developer-guide: Developer Guide
+    reference: API Reference
+
+  header_links:
+    - { text: GitHub, url: "https://github.com/Djpanther78/MDToHTMLDocs", icon: github }
+  footer_links:
+    - { text: GitHub, url: "https://github.com/Djpanther78/MDToHTMLDocs", icon: github }
+    - { text: Issues & Feedback, url: "https://github.com/Djpanther78/MDToHTMLDocs/issues" }
+
+features:
+  search: true
+  toc: true
+  dark_mode_toggle: true
+  copy_code: true
+  breadcrumbs: true
+  prev_next: true
+  page_anchors: true
+  external_link_icons: true
+  show_last_built: true
+
+  reading_progress: true
+  scroll_top_button: true
+  estimated_read_time: true
+  last_updated: true
+  anchor_copy: true
+  code_titles: true
+
+  edit_link: "https://github.com/Djpanther78/MDToHTMLDocs/edit/main/README.md"
+
+markdown:
+  extensions:
+    - extra
+    - codehilite
+    - toc
+    - admonition
+    - tables
+    - fenced_code
+    - footnotes
+    - attr_list
+    - def_list
+    - sane_lists
+    - meta
+  extension_configs:
+    codehilite:
+      guess_lang: false
+      css_class: highlight
+    toc:
+      permalink: false
+      anchorlink: false
+
+embed:
+  images: true
+  max_image_mb: 10
+  inline_remote: false
+
+# -------------------------------------------------------------------
+# Icons — assign an SVG to any page or folder in the sidebar.
+#
+# Built-in names (always work offline): home, book, rocket, settings,
+# network, code, globe, database, terminal, key, tag, file, folder,
+# package, shield, layers, search, info.
+#
+# Any other name is treated as an Iconify id ("prefix:name"). The script
+# downloads it from api.iconify.design and caches it under cache_dir.
+# Examples: "lucide:database", "mdi:home", "tabler:rocket".
+# -------------------------------------------------------------------
+icons:
+  source: iconify
+  cache_dir: .icon_cache
+  pages:
+    Home:                         home
+    Getting-Started:              rocket
+    Installation:                 package
+  folders:
+    user-guide:                   book
+    developer-guide:              code
+    reference:                    file

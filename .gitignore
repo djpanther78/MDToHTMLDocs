@@ -1,0 +1,11 @@
+# Venv
+venv/
+
+# Icon Cache
+.icon_cache/
+
+# Generated Output
+*.html
+
+# Config
+config.yml
